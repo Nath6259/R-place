@@ -2,7 +2,7 @@
 
 Ces projets sont donné sous la forme d'un client qui souhaite créer un site pour son entreprise ou son association.
 	- Si possible, ces projets devront être fait en méthode Agile.
-	- L'équipe devra rendre une maquette (pus ou moins bien faite) du site et un MCD avant de commencer à coder.
+	- L'équipe devra rendre une maquette (plus ou moins bien faite) du site et un MCD avant de commencer à coder.
 	- L'équipe devra utiliser GIT pour fusionner leur travail.
 	- Au bout d'un mois, le groupe devra présenter sont projet devant le groupe et répondre à leurs questions.
 	- Attention, le client ne connaît pas forcément bien le milieu du développement, cela fait partie de votre travail de lui indiquer ce qui est possible ou non.

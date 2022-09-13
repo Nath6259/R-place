@@ -1,0 +1,14 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #1D1D1D;
+}
+canvas{
+    background: white;
+    position: absolute;
+    top: 240px;
+    left: 310px;
+}
