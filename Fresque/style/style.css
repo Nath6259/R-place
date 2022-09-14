@@ -5,6 +5,7 @@
 }
 body{
     background: #1D1D1D;
+    font-size: 100vw;
 }
 canvas{
     background: white;
@@ -12,3 +13,9 @@ canvas{
     top: 240px;
     left: 310px;
 }
+/* @media screen and (min-width: 1890px){
+    canvas{
+        top: 0px;
+        left: 0px;
+    }
+} */

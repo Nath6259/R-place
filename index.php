@@ -11,6 +11,7 @@
         <li>
             <h3>R-place</h3>
             <ol>
+                <li><a href="./Fresque/inscription.php">Inscription</a></li>
                 <li><a href="./Fresque/index.php">Fresques</a></li>
             </ol>
         </li>
