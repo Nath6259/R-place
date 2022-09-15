@@ -5,14 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style-ins.css">
-    <title>Inscription</title>
+    <title>Connexion</title>
 </head>
 <body>
 <form action="" method="post">
-    <h2>Inscription</h2>
-    <input type="text" name="name" id="name" placeholder="Nom">
-    <br>
-    <span></span>
+    <h2>Connexion</h2>
     <br>
     <input type="email" name="email" id="email" placeholder="Email">
     <br>
@@ -27,7 +24,7 @@
     <span class="error"><?php echo $error["login"]??"" ?></span>
 </form>
 <footer>
-    <p>Vous avez déjà un compte ? <a href="./connexion.php">Connecté Vous</a></p>
+    <p>Vous n'avez pas de compte ? <a href="./inscription.php">Inscrivez-vous</a></p>
 </footer>
 </body>
 </html>
