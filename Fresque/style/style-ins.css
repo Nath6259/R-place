@@ -68,3 +68,22 @@ footer{
     display: flex;
     justify-content: center;
 }
+#canvas {
+    display: grid;
+    justify-content: center;
+}
+.conteneur{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+#guide {
+    display: grid;
+    pointer-events: none;
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  #guide div {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }

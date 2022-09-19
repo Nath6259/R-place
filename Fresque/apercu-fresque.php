@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apercu Fresques</title>
     <link rel="stylesheet" href="./style/style-ins.css">
+    <script src="./script/Apercu.js" defer></script>
 </head>
 <body>
     <h2>R-place</h2>
@@ -17,6 +18,10 @@
             <a href="./fresque2.php">Fresque n°2</a>
         </div>
     </section>
+    <div class="conteneur">
+        <div id="guide"></div>
+        <canvas width="650" height="650" id="canvas"></canvas>
+    </div>
     <footer class="deco">
     <a href="./connexion.php">Déconnexion</a>
     </footer>
