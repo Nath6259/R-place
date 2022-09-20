@@ -3,9 +3,9 @@
  */
  const canvas = document.getElementById("canvas");
  const guide = document.getElementById("guide");
- const colorInput = document.getElementById("colorInput");
+//  const colorInput = document.getElementById("colorInput");
  const toggleGuide = document.getElementById("toggleGuide");
- const clearButton = document.getElementById("clearButton");
+//  const clearButton = document.getElementById("clearButton");
  const drawingContext = canvas.getContext("2d");
  
  const CELL_SIDE_COUNT = 140;
@@ -13,7 +13,7 @@
  const colorHistory = {};
  
  // Set default color
- colorInput.value = "#009578";
+//  colorInput.value = "#009578";
  
  // Initialize the canvas background
  drawingContext.fillStyle = "#ffffff";
@@ -46,21 +46,21 @@
  
    if (e.ctrlKey) {
      if (currentColor) {
-       colorInput.value = currentColor;
+    //    colorInput.value = currentColor;
      }
    } else {
      fillCell(cellX, cellY);
    }
  }
  
- function handleClearButtonClick() {
-   const yes = confirm("Are you sure you wish to clear the canvas?");
+//  function handleClearButtonClick() {
+//    const yes = confirm("Are you sure you wish to clear the canvas?");
  
-   if (!yes) return;
+//    if (!yes) return;
  
-   drawingContext.fillStyle = "#ffffff";
-   drawingContext.fillRect(0, 0, canvas.width, canvas.height);
- }
+//    drawingContext.fillStyle = "#ffffff";
+//    drawingContext.fillRect(0, 0, canvas.width, canvas.height);
+//  }
  
  function handleToggleGuideChange() {
    guide.style.display = toggleGuide.checked ? null : "none";
@@ -70,12 +70,12 @@
    const startX = cellX * cellPixelLength;
    const startY = cellY * cellPixelLength;
  
-   drawingContext.fillStyle = colorInput.value;
+//    drawingContext.fillStyle = colorInput.value;
    drawingContext.fillRect(startX, startY, cellPixelLength, cellPixelLength);
-   colorHistory[`${cellX}_${cellY}`] = colorInput.value;
+//    colorHistory[`${cellX}_${cellY}`] = colorInput.value;
  }
  
  canvas.addEventListener("mousedown", handleCanvasMousedown);
- clearButton.addEventListener("click", handleClearButtonClick);
+//  clearButton.addEventListener("click", handleClearButtonClick);
  toggleGuide.addEventListener("change", handleToggleGuideChange);
  
