@@ -2,7 +2,7 @@
 
 function connexionPDO() : PDO{
 
-    $config = require __DIR__ . "/_blogConfig.php"; // il nous faut une BDD
+    $config = require __DIR__ . "../../../ressources/config.php"; // il nous faut une BDD
 
 $dsn = 
 "mysql:host=".$config["host"]
@@ -18,9 +18,9 @@ try{
     );
 
     return $pdo;
-}catch(PDOExeption $e){
+}catch(PDOException $e){
  
-throw new PDOExeption(
+throw new PDOException(
             $e->getMessage(),
             (int)$e->getCode()
         );

@@ -43,7 +43,7 @@ function creatUser() :void{
                     $error["password"] = "Veuillez saisir un mot de passe";
                 }else {
                     $password = cleanData($_POST["password"]);
-                    if(!pre_match($regexPass, $password)){
+                    if(!preg_match($regexPass, $password)){ 
                         $error["password"] = "Veuillez saisir un mot de passe valide"; 
                     }else{
                         $password = password_hash($password, PASSWORD_DEFAULT);
