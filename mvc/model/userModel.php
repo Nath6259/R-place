@@ -42,10 +42,10 @@ function getOnUserById(int $id): array|bool{
  * @param string $pass
  * @return void
  */
-function addUser(string $us, string $em, string $pass): void{
+function addUser(string $username, string $email, string $password): void{
     $pdo = connexionPDO();
     $sql = $pdo -> prepare("INSERT INTO users(username, email, password) VALUES(?,?,?)");
-    $sql -> execute([$us, $em, $pass]);
+    $sql -> execute([$username, $email, $password]);
 }
 /**
  * Supprime un utilisateur via son ID. 

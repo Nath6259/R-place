@@ -18,5 +18,14 @@
                 <li><a href="./Fresque/fresque2.php">Fresque n°2</a></li>
             </ol>
         </li>
+        <li>
+            <h3>R-place (Avec Back)</h3>
+            <ol>
+                <li><a href="/mvc/inscription">Inscription</a></li>
+                <li><a href="/mvc/connexion">Connexion</a></li>
+                <li><a href="/mvc/apercu">Apercu Fresques</a></li>
+                <li><a href="/mvc/fresque1">Fresques n°1</a></li>
+                <li><a href="/mvc/fresque2">Fresques n°2</a></li>
+        </li>
 </body>
 </html>
