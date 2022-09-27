@@ -17,11 +17,12 @@
     <br>
     <input type="password" name="password" id="password" placeholder="Mot de passe">
     <br>
-    <span class="error"><?php echo $error["password"]??"" ?></span>
+    <span class="error"><?php echo $error["pass"]??"" ?></span>
     <br>
     <input type="submit" value="Connexion" name="login" id="connexion">
     <br>
     <span class="error"><?php echo $error["login"]??"" ?></span>
+    <!-- <?php var_dump($email) ?> -->
 </form>
 <footer>
     <p>Vous n'avez pas de compte ? <a href="/mvc/inscription">Inscrivez-vous</a></p>

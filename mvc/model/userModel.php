@@ -71,10 +71,10 @@ function updateUserById(string $username, string $email, string $password, int $
     $pdo = connexionPDO();
     $sql = $pdo -> prepare("UPDATE users SET username=:us, email = :em, password= :mdp WHERE idUser = :id");
     $sql -> execute([
-                    "id"=> $id,
-                    "em" => $email,
-                    "mdp" => $password,
-                    "us" => $username
+        "id"=> $id,
+        "em" => $email,
+        "mdp" => $password,
+        "us" => $username
     ]);
 }
 ?>

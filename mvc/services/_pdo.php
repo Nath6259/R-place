@@ -14,7 +14,7 @@ try{
         $dsn,
         $config["user"],
         $config["password"],
-        $config["options"],
+        $config["options"]
     );
 
     return $pdo;
@@ -24,12 +24,12 @@ throw new PDOException(
             $e->getMessage(),
             (int)$e->getCode()
         );
-}
+    }
 }
 
 function cleanData(string $data): string{
-$data=trim($data);
-$data=stripslashes($data);
-return htmlspecialchars($data);
+    $data=trim($data);
+    $data=stripslashes($data);
+    return htmlspecialchars($data);
 }
 ?>

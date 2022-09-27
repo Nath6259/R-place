@@ -1,29 +1,28 @@
 <?php
-require __DIR__."../../model/userModel.php";
 require __DIR__."../../../ressources/_isloggedV2.php";
+require __DIR__."../../model/userModel.php";
+
 function connexion():void
 {
-    isLogged(false, "/05-mvc");
+    isLogged(false, "/mvc");
     $email = $pass = $verify = "";
     $error = [];
     $regexPass = "/^(?=.*[!?@#$%^&*+-])(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).{6,}$/";
 
 
-    if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"]))
+    if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login']))
     {
         if(empty($_POST["email"])){
             $error["email"] = "Veuillez entrer un email";
         }else{
             $email = cleanData($_POST["email"]);
             $verify = getOneUserByEmail($email);
-            if(
-                !filter_var($email, FILTER_VALIDATE_EMAIL)){
+            var_dump($email == $verify["email"]);
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
                     $error["email"] = "Email invalide";
                 }
-                elseif(
-                    $email != $verify["email"]
-                )
-                {
+                elseif($email != $verify["email"]
+                ){
                     $error["email"] = "Aucun compte liée a cette email";
                 }
     
@@ -42,9 +41,9 @@ function connexion():void
                     $_SESSION["logged"] = true;
                     $_SESSION["username"] = $verify["username"];
                     $_SESSION["email"] = $verify["email"];
-                    $_SESSION["idUser"] = $verify["idUser"];
+                    $_SESSION["ID"] = $verify["ID"];
                     $_SESSION["expire"] = time()+ (60*60);
-                    header("Location: /05-mvc");
+                    header("Location: /mvc/apercu");
                     exit;
                 }else{
                 $error["login"] = "mot de passe incorrecte";
@@ -59,11 +58,11 @@ function connexion():void
 }
 function deconnexion():void
 {
-    islogged(true, "/05-mvc/connexion");
+    islogged(true, "/mvc/connexion");
     unset($_SESSION);
     session_destroy();
     setcookie("PHPSESSID", "", time()-3600);
-    header("Location: /05-mvc/connexion");
+    header("Location: /mvc/connexion");
     exit;
 }
 ?>

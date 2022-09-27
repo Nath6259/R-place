@@ -13,6 +13,10 @@ define("ROUTES", [
         "controller"=>"authController.php",
         "fonction"=>"connexion"
     ],
+    "mvc/deconnexion"=>[
+        "controller"=>"authController.php",
+        "fonction"=>"deconnexion"
+    ],
     "mvc/apercu"=>[
         "controller"=>"userController.php",
         "fonction"=>"apercu"

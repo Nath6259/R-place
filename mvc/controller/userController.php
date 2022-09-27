@@ -52,20 +52,20 @@ function createUser():void
             }
         }
         // Traitement de la verification du password.
-        if(empty($_POST["passwordBis"])){
-            $error["passwordBis"] = "Veuillez saisir à nouveau votre mot de passe";
-        }else{
-            if($_POST["password"] != $_POST["passwordBis"]){
-                $error["passwordBis"] = "Veuillez saisir le même mot de passe.";
-            }
-        }
+        // if(empty($_POST["passwordBis"])){
+        //     $error["passwordBis"] = "Veuillez saisir à nouveau votre mot de passe";
+        // }else{
+        //     if($_POST["password"] != $_POST["passwordBis"]){
+        //         $error["passwordBis"] = "Veuillez saisir le même mot de passe.";
+        //     }
+        // }
         // envoi des données
         
         if(empty($error)){
             
             // J'ajoute mon utilisateur en BDD
             addUser($username, $email, $password);
-            header("Location: /mvc");
+            header("Location: /mvc/connexion");
             exit;
         }
     }

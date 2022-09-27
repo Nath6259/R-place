@@ -12,10 +12,10 @@
     <h2>R-place</h2>
     <section class="fresque">
         <div class="fresque1">
-            <a href="./fresque1.php">Fresque n°1</a>
+            <a href="/mvc/fresque1">Fresque n°1</a>
         </div>
         <div class="fresque2">
-            <a href="./fresque2.php">Fresque n°2</a>
+            <a href="/mvc/fresque2">Fresque n°2</a>
         </div>
     </section>
     <div class="conteneur">
@@ -23,7 +23,7 @@
         <canvas width="650" height="650" id="canvas"></canvas>
     </div>
     <footer class="deco">
-    <a href="/mvc/connexion">Déconnexion</a>
+    <a href="/mvc/deconnexion">Déconnexion</a>
     </footer>
 </body>
 </html>
