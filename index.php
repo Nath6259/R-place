@@ -1,31 +1,23 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R-place</title>
-</head>
-<body>
-    <ol>
-        <li>
-            <h3>R-place</h3>
-            <ol>
-                <li><a href="./Fresque/inscription.php">Inscription</a></li>
-                <li><a href="./Fresque/connexion.php">Connexion</a></li>
-                <li><a href="./Fresque/apercu-fresque.php">Apercu Fresques</a></li>
-                <li><a href="./Fresque/fresque1.php">Fresque n°1</a></li>
-                <li><a href="./Fresque/fresque2.php">Fresque n°2</a></li>
-            </ol>
-        </li>
-        <li>
-            <h3>R-place (Avec Back)</h3>
-            <ol>
-                <li><a href="/mvc/inscription">Inscription</a></li>
-                <li><a href="/mvc/connexion">Connexion</a></li>
-                <li><a href="/mvc/apercu">Apercu Fresques</a></li>
-                <li><a href="/mvc/fresque1">Fresques n°1</a></li>
-                <li><a href="/mvc/fresque2">Fresques n°2</a></li>
-        </li>
-</body>
-</html>
+<link rel="stylesheet" href="./mvc/style/style-ins.css">
+<title>Inscription</title>
+<form action="" method="POST">
+    <h2>Inscription</h2>
+    <input type="text" name="username" id="name" placeholder="Nom" required>
+    <br>
+    <span class="error"><?php echo $error["username"]??"" ?></span>
+    <br>
+    <input type="email" name="email" id="email" placeholder="Email" required>
+    <br>
+    <span class="error"><?php echo $error["email"]??"" ?></span>
+    <br>
+    <input type="password" name="password" id="password" placeholder="Mot de passe" required>
+    <br>
+    <span class="error"><?php echo $error["password"]??"" ?></span>
+    <br>
+    <input type="submit" value="Inscription" name="inscription" id="connexion">
+    <br>
+</form>
+<footer>
+    <p>Vous avez déjà un compte ? <a href="/mvc/connexion">Connecté Vous</a></p>
+</footer>
+</form>
