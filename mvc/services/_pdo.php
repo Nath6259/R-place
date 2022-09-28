@@ -2,7 +2,7 @@
 
 function connexionPDO() : PDO{
 
-    $config = require __DIR__ . "/_blogConfig.php"; // il nous faut une BDD
+    $config = require __DIR__ . "../../../ressources/config.php";
 
 $dsn = 
 "mysql:host=".$config["host"]
@@ -14,22 +14,22 @@ try{
         $dsn,
         $config["user"],
         $config["password"],
-        $config["options"],
+        $config["options"]
     );
 
     return $pdo;
-}catch(PDOExeption $e){
+}catch(PDOException $e){
  
-throw new PDOExeption(
+throw new PDOException(
             $e->getMessage(),
             (int)$e->getCode()
         );
-}
+    }
 }
 
 function cleanData(string $data): string{
-$data=trim($data);
-$data=stripslashes($data);
-return htmlspecialchars($data);
+    $data=trim($data);
+    $data=stripslashes($data);
+    return htmlspecialchars($data);
 }
 ?>

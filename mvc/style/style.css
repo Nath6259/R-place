@@ -1,0 +1,43 @@
+body {
+    background: #1D1D1D;
+    color: #ffffff;
+    font-family: sans-serif;
+  }
+  
+  #canvas {
+    cursor: pointer;
+    display: grid;
+    justify-content: center;
+    /* position: absolute;
+    margin-left: 320px; */
+  }
+  
+  #guide {
+    display: grid;
+    pointer-events: none;
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    /* margin-left: 320px; */
+  }
+  
+  #guide div {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+.conteneur{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+.footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+.retour{
+    display: flex;
+    justify-content: center;
+}
+.btn-retour{
+    color: #FFFFFF;
+    text-decoration: none;
+}
